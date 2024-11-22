@@ -1,0 +1,30 @@
+body{
+        font-family: "Klee One", cursive;
+        font-weight: 400;
+        font-style: normal;
+}
+
+img{
+    border-radius: 20px;
+}
+
+.thead{
+    background-color: rgb(#1abc9c);
+}
+
+.nombre{
+    border-radius: 5px;
+}
+
+.btn1{
+    background-color: rgb(#3498db);
+}
+
+.btn2{
+    background-color: rgb(#3498db);
+}
+
+.btn3{
+    background-color: rgb(#3498db);
+}
+

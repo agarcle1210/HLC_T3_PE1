@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.google.com/specimen/Klee+One?query=Klee+One&categoryFilters=Feeling:%2FExpressive%2FCute;Calligraphy:%2FScript%2FHandwritten">
+<title>Andres Garcia Clemente</title>
+</head>
+<body>
+
+  <!-- Contenido de la página -->
+   <div class="menu">
+    <button id="btn1" class="tab" class="active">Inicio</button>
+    <button id="btn2" class="tab">Información</button>
+    <button id="btn3" class="tab">Formulario</button> 
+  </div>
+
+  <div class="tab1">
+    <h1>Inicio</h1>
+    <p>Hola, mi nombre es Andrés García Clemente y esta es la prática evaluable 1 de HLC</p>
+    <img id="img" src="https://miro.medium.com/v2/resize:fit:828/format:webp/0*XFKvzn30CglSpb3o" height="200px">
+  </div>
+
+  <div class="tab2">
+    <h1>Información</h1>
+    <p>El examen de HLC Consta de las siguientes partes:</p>
+    <ul>
+      <li>Un menú lateral</li>
+      <li>Un formulario</li>
+      <li>Varios elementos HTML como:</li>
+        <ul>
+          <li>Títulos</li>
+          <li>Imágenes</li>
+          <li>Listas</li>
+        </ul>
+    </ul>
+    <p>Algunos datos iimportantes de la práctica son:</p>
+    <table border="1">
+      <thead id="thead">
+      <tr>
+        <th>Forma de entrega</th>
+        <th>Tiempo</th>
+        <th>Calificación</th>
+      </tr>
+    </thead>
+      <tr>
+        <td>Github y GithubPages</td>
+        <td>2 Horas</td>
+        <td>Numérica</td>
+      </tr>
+    </table>
+  </div>
+  
+  <div class="tab3">
+  <h1>Formulario</h1>
+  <form action="">
+    <label for="nombre">Nombre:</label><br>
+    <input type="text" id="nombre" placeholder="Ingresa tu nombre" required><br><br>
+    <label for="correo">Correo electrónico:</label><br>
+    <input type="email" id="correo" placeholder="Ingresa tu correo" required><br><br>
+    <label for="mensaje">Mensaje:</label><br>
+    <textarea id="mensaje" placeholder="Escriba su mensaje aquí"></textarea><br><br>
+    <input type="submit" value="Enviar">
+  </form>
+  </div>
+  <!-- Fin contenido de la página -->
+
+  <script>
+    function showTabById(tabId) {
+      const tabs = document.querySelectorAll('.tab');
+      tabs.forEach(tab => {
+        tab.classList.toggle('active', tab.id === tabId);
+      });
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      const buttons = document.querySelectorAll('.menu button');
+      buttons.forEach(button => {
+        button.addEventListener('click', () => {
+          const tabId = button.id.replace('btn', 'tab');
+          showTabById(tabId);
+        });
+      });
+    });
+  </script>
+</body>
+</html>
